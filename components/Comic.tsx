@@ -4,11 +4,13 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import { Comic } from "../types/Comic";
 import Alt from "./Alt";
 
+
 dayjs.extend(relativeTime);
+
+
 
 const ComicComponent: React.FC = () => {
   const [comic, setComic] = useState<Comic | null>(null);
-
   useEffect(() => {
     const fetchComic = async () => {
       try {
